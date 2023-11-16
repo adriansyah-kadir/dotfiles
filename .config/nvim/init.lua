@@ -1,3 +1,4 @@
+-- user
 require('plugins')
 require('sources')
 require('sets')
@@ -7,6 +8,7 @@ require('funcs')
 require('commands')
 require('autos')
 
+-- plugins
 require('neosolarized').setup{
 	background = true
 }

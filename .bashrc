@@ -33,11 +33,4 @@ add_to_path() {
 source .bash_functions
 source .bash_paths
 
-# pnpm
-export PNPM_HOME="/home/aldo/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 . "$HOME/.cargo/env"
