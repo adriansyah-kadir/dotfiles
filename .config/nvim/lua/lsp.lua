@@ -1,10 +1,25 @@
 local cmp = require('cmp')
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local wk = require("which-key")
 
-vim.keymap.set('n', 'gk', vim.lsp.buf.hover)
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
-vim.keymap.set('n', 'ge', vim.lsp.buf.code_action)
+wk.register({
+	["g"] = {
+		["D"] = {vim.lsp.buf.declaration, "goto declaration"},
+		["d"] = {vim.lsp.buf.definition, "goto definiton"}
+	},
+	["<leader>"] = {
+		["c"] = {
+			name = "code lsp",
+			["a"] = {vim.lsp.buf.code_action, "open code action"}
+		},
+		["d"] = {
+			name = "diagnostic",
+			["l"] = {vim.diagnostic.setloclist, "list buffer"},
+			["L"] = {vim.diagnostic.setqflist, "list all"}
+		}
+	}
+})
+
 -- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 cmp.setup({

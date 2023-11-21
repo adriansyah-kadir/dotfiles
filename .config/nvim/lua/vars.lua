@@ -9,3 +9,4 @@ vim.g.clipboard = {
 		['*'] = 'wl-paste',
 	}
 }
+vim.g.mapleader = " "
