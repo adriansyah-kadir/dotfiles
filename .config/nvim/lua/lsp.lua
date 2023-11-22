@@ -1,5 +1,5 @@
+---@diagnostic disable: missing-fields
 local cmp = require('cmp')
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local wk = require("which-key")
 
 wk.register({
@@ -23,6 +23,8 @@ wk.register({
 -- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 cmp.setup({
+	preselect = "None",
+	confirmation = { completeopt = 'menu,menuone,noinsert' },
 	snippet = {
 		expand = function(args)
 			vim.fn['UltiSnips#Anon'](args.body)
@@ -44,6 +46,7 @@ cmp.setup({
 	},
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
+		{ name = 'nvim_lsp_signature_help' },
 		{ name = 'ultisnips' }, -- For ultisnips users.
 	}, {
 		{ name = 'buffer' },

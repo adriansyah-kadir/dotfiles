@@ -17,12 +17,15 @@ require("lazy").setup({
 	 'hrsh7th/nvim-cmp',
 	 'hrsh7th/cmp-buffer',
 	 'hrsh7th/cmp-nvim-lsp',
+	 'hrsh7th/cmp-nvim-lsp-signature-help',
 	 {
 		 'williamboman/mason-lspconfig.nvim',
 		 dependencies = 'williamboman/mason.nvim',
 		 config = function ()
-			 require('mason').setup()
-			 require('mason-lspconfig').setup()
+			 require('mason').setup({})
+			 require('mason-lspconfig').setup({
+				 ensure_installed = {"lua_ls", "svelte", "clangd", "tailwindcss", "tsserver"}
+			 })
 		 end
 	 },
 	 'quangnguyen30192/cmp-nvim-ultisnips',
@@ -39,7 +42,7 @@ require("lazy").setup({
 			'nvim-lualine/lualine.nvim',
 			dependencies = 'nvim-tree/nvim-web-devicons',
 			config = function ()
-				require('lualine').setup()
+				require('lualine').setup{}
 			end
 		},
 		{
@@ -73,7 +76,6 @@ require("lazy").setup({
 		 'nvim-treesitter/nvim-treesitter',
 		 config = function ()
 			 require('nvim-treesitter.configs').setup{
-				 auto_install = true,
 				 highlight = {
 					 enable = true
 				 },
@@ -111,4 +113,7 @@ require("lazy").setup({
 			require('bufferline').setup()
 		end
 	},
+	{
+		"tpope/vim-surround"
+	}
 })
