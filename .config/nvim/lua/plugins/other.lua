@@ -41,6 +41,7 @@ return {
 				textobjects = {
 					enable = true
 				},
+				ensure_installed = {"svelte", "markdown", "typescript", "c"}
 			}
 		end
 	},
