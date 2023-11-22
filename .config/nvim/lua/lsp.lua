@@ -10,7 +10,8 @@ wk.register({
 	["<leader>"] = {
 		["c"] = {
 			name = "code lsp",
-			["a"] = {vim.lsp.buf.code_action, "open code action"}
+			["a"] = {vim.lsp.buf.code_action, "open code action"},
+			["r"] = {vim.lsp.buf.rename, "rename symbol under cursor"},
 		},
 		["d"] = {
 			name = "diagnostic",
