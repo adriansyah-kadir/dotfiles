@@ -1,11 +1,11 @@
 ---@diagnostic disable: missing-fields
 return {
-	{
-		"nvim-tree/nvim-tree.lua",
-		config = function ()
-			require('nvim-tree').setup{}
-		end
-	},
+-- {
+-- 	"nvim-tree/nvim-tree.lua",
+-- 	config = function ()
+-- 		require('nvim-tree').setup{}
+-- 	end
+-- },
 	{
 		"windwp/nvim-autopairs",
 		config = function ()
@@ -23,8 +23,8 @@ return {
 					file_ignore_patterns = {
 						"node_modules",
 						".git"
-					}
-				}
+					},
+				},
 			}
 		end
 	},
@@ -60,10 +60,4 @@ return {
 	{
 		"tpope/vim-surround"
 	},
-	{
-		"ggandor/leap.nvim",
-		config = function ()
-			require('leap').add_default_mappings()
-		end
-	}
 }

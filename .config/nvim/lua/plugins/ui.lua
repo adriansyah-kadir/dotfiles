@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
 	{
 		'nvim-lualine/lualine.nvim',
@@ -18,7 +19,13 @@ return {
 		version = "*",
 		dependencies = 'nvim-tree/nvim-web-devicons',
 		config = function ()
-			require('bufferline').setup()
+			local bufferline = require("bufferline")
+			bufferline.setup{
+				options = {
+					style_preset = bufferline.style_preset.default,
+					separator_style = "slant"
+				}
+			}
 		end
 	},
 }

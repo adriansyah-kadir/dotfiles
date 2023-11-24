@@ -8,8 +8,7 @@ wk.register({
 			["f"] = {function () telescope.find_files({hidden = true}) end, "find files on current workspace"},
 			["g"] = {telescope.live_grep, "live grep"},
 		},
-		--["w"] = {"<C-w>", "window shortcut <C-w>"},
-		["e"] = {vim.cmd.NvimTreeOpen, "open file browser"},
+		["e"] = {"<cmd>15Lexplore %:p:h<cr>", "open current file folder"},
 		["x"] = {vim.cmd.bd, "delete current buffer"},
 	},
 	["g"] = {
@@ -22,6 +21,6 @@ wk.register({
 
 vim.api.nvim_set_keymap("n", "o", "o<esc>", {desc = "newline below current line"})
 vim.api.nvim_set_keymap("n", "O", "O<esc>", {desc = "newline above current line"})
-vim.api.nvim_set_keymap('n', '<tab>', "<cmd>tabnext<cr>", {desc = "goto next tab"})
-vim.api.nvim_set_keymap('n', '<s-tab>', "<cmd>tabprevious<cr>", {desc = "goto prev tab"})
+vim.api.nvim_set_keymap('n', '<tab>', "<cmd>bnext<cr>", {desc = "goto next buffer"})
+vim.api.nvim_set_keymap('n', '<s-tab>', "<cmd>bprevious<cr>", {desc = "goto prev buffer"})
 vim.api.nvim_set_keymap('n', '<leader>w', "<C-w>", {desc = "window <C-w> shortcut"})
