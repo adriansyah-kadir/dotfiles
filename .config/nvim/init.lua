@@ -22,3 +22,7 @@ require('funcs')
 require('commands')
 require('autos')
 require('lsp')
+
+if vim.g.neovide then
+	require("neovide")
+end
