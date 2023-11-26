@@ -21,14 +21,12 @@ wk.register({
 	}
 })
 
--- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
-
 cmp.setup({
 	preselect = "None",
 	confirmation = { completeopt = 'menu,menuone,noinsert' },
 	snippet = {
 		expand = function(args)
-			vim.fn['UltiSnips#Anon'](args.body)
+			vim.fn['vsnip#anonymous'](args.body)
 		end
 	},
 	mapping = {
@@ -48,7 +46,7 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'nvim_lsp_signature_help' },
-		{ name = 'ultisnips' }, -- For ultisnips users.
+		{ name = 'vsnip' },
 	}, {
 		{ name = 'buffer' },
 	})
@@ -61,5 +59,5 @@ require('mason-lspconfig').setup_handlers{
 		require('lspconfig')[server_name].setup{
 			capalibities = capalibities
 		}
-	end
+	end,
 }

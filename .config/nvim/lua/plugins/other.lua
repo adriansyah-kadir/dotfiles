@@ -1,11 +1,5 @@
 ---@diagnostic disable: missing-fields
 return {
--- {
--- 	"nvim-tree/nvim-tree.lua",
--- 	config = function ()
--- 		require('nvim-tree').setup{}
--- 	end
--- },
 	{
 		"windwp/nvim-autopairs",
 		config = function ()
@@ -13,7 +7,7 @@ return {
 		end
 	},
 	{
-		'SirVer/ultisnips',
+		'hrsh7th/vim-vsnip'
 	},
 	{
 		'nvim-telescope/telescope.nvim',

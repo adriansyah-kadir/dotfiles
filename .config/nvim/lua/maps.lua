@@ -23,4 +23,4 @@ vim.api.nvim_set_keymap("n", "o", "o<esc>", {desc = "newline below current line"
 vim.api.nvim_set_keymap("n", "O", "O<esc>", {desc = "newline above current line"})
 vim.api.nvim_set_keymap('n', '<tab>', "<cmd>bnext<cr>", {desc = "goto next buffer"})
 vim.api.nvim_set_keymap('n', '<s-tab>', "<cmd>bprevious<cr>", {desc = "goto prev buffer"})
-vim.api.nvim_set_keymap('n', '<leader>w', "<C-w>", {desc = "window <C-w> shortcut"})
+vim.api.nvim_set_keymap('t', '<C-t>', "<C-\\><C-n>", {desc = "window <C-w> shortcut"})

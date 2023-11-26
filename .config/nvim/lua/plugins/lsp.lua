@@ -3,6 +3,7 @@ return {
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-nvim-lsp',
+	'hrsh7th/cmp-vsnip',
 	'hrsh7th/cmp-nvim-lsp-signature-help',
 	{
 		'williamboman/mason-lspconfig.nvim',
@@ -14,7 +15,6 @@ return {
 			})
 		end
 	},
-	'quangnguyen30192/cmp-nvim-ultisnips',
 	{
 		'folke/neodev.nvim',
 		config = function ()
