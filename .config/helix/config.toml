@@ -1,0 +1,22 @@
+theme="dracula_transparent"
+
+[editor]
+auto-save=true
+true-color=true
+bufferline="multiple"
+idle-timeout=0
+completion-trigger-len=1
+
+[editor.lsp]
+display-messages=true
+display-inlay-hints=false
+
+[editor.file-picker]
+hidden=false
+
+[editor.indent-guides]
+render=true
+character="╎"
+
+[editor.gutters]
+line-numbers = {min-width = 1}
