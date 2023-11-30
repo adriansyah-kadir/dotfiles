@@ -10,8 +10,9 @@ return {
 	{
 		"dracula/vim",
 		name = "dracula-theme",
-		config = function()
-			vim.cmd("colorscheme dracula")
+		config = function ()
+			vim.cmd.colorscheme("dracula")
+			vim.cmd.hi("Normal guibg=None")
 		end
 	},
 	{

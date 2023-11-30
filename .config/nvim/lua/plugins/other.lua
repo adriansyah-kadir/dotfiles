@@ -1,4 +1,5 @@
 ---@diagnostic disable: missing-fields
+
 return {
 	{
 		"windwp/nvim-autopairs",
@@ -52,6 +53,15 @@ return {
 		opts = {}
 	},
 	{
-		"tpope/vim-surround"
+		"tpope/vim-surround",
+		config = function ()
+			vim.api.nvim_set_keymap('i', '<C-j>', "<cmd>lua vim.fn['vsnip#expand']()<cr>", {desc = "expand vsnip"})
+		end
+	},
+	{
+		"nvim-tree/nvim-tree.lua",
+		config = function ()
+			require('nvim-tree').setup()
+		end
 	},
 }
