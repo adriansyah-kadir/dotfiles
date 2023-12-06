@@ -39,4 +39,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/aldo/\x2ebun/bin\x1e/home/aldo/\x2ecargo/bin\x1e/home/aldo/Programs/AppImageLauncher/bin\x1e/home/aldo/Programs/bin\x1e/home/aldo/\x2epython/venv/bin\x1e/home/aldo/Programs/VSCode\x2dlinux\x2dx64/bin
+SETUVAR fish_user_paths:/home/aldo/Android/Sdk\x1e/home/aldo/Android/Sdk/emulator\x1e/home/aldo/Android/Sdk/platform\x2dtools\x1e/home/aldo/Programs/android\x2dstudio/jbr/bin\x1e/home/aldo/Android/Sdk/cmdline\x2dtools/latest/bin\x1e/home/aldo/Programs/android\x2dstudio/bin\x1e/home/aldo/Programs/flutter/bin\x1e/home/aldo/\x2ebun/bin\x1e/home/aldo/\x2ecargo/bin\x1e/home/aldo/Programs/AppImageLauncher/bin\x1e/home/aldo/Programs/bin\x1e/home/aldo/\x2epython/venv/bin\x1e/home/aldo/Programs/VSCode\x2dlinux\x2dx64/bin

@@ -1,5 +1,6 @@
 local telescope = require("telescope.builtin")
 local wk = require("which-key")
+local ts_utils = require 'nvim-treesitter.ts_utils'
 
 wk.register({
 	["<leader>"] = {

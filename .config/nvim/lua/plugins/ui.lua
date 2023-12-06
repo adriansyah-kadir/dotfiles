@@ -12,7 +12,9 @@ return {
 		name = "dracula-theme",
 		config = function ()
 			vim.cmd.colorscheme("dracula")
-			vim.cmd.hi("Normal guibg=None")
+			if not vim.g.neovide then
+				vim.cmd.hi("Normal guibg=None")
+			end
 		end
 	},
 	{

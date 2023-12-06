@@ -22,6 +22,9 @@ wk.register({
 })
 
 cmp.setup({
+	completion = {
+		keyword_length = 1
+	},
 	preselect = "None",
 	confirmation = { completeopt = 'menu,menuone,noinsert' },
 	snippet = {
