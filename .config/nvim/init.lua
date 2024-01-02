@@ -1,5 +1,8 @@
--- user
----@diagnostic disable: missing-fields
+require("options")
+require("settings")
+require("mappings")
+require("utils")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,17 +15,4 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
-require('sets')
-require('vars')
-require('sources')
 require("lazy").setup("plugins")
-require('maps')
-require('funcs')
-require('commands')
-require('autos')
-require('lsp')
-
-if vim.g.neovide then
-	require("neovide")
-end
